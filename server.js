@@ -60,11 +60,11 @@ app.post('/imageurl', (req, res) => {image.handleApiCall(req, res, input)})
 //always do api call at the beck-end***********
 
 
-const PORT = 3000 //process.env.PORT
+ //process.env.PORT
 //*****to listen to the dynamic port not a single port */
 //********with using environmental variable */
-app.listen(PORT, () => {
-    console.log(`app is running on port ${PORT}`)
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`)
 });
 
 
