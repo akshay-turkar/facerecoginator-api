@@ -16,10 +16,8 @@ const { response } = require("express")
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-crystalline-80062',//home
-      user : 'postgres',
-      password : 'root',
-      database : 'smart-brain'
+      host : 'process.env.DATABASE_URL',//home
+      ssl: true
     }
   });
 
