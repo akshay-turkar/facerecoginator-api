@@ -7,12 +7,11 @@ const app = new Clarifai.App({
 
 const handleApiCall = (req, res) => {
     const {input} = req.body
-    res.json(input)
-    // app.models.
-    // predict(Clarifai.FACE_DETECT_MODEL, input)
-    // .then(data => {
-    //     res.json(data)
-    // })
+    app.models.
+    predict(Clarifai.FACE_DETECT_MODEL, input)
+    .then(data => {
+        res.json(data)
+    })
     .catch(err => res.status(400).json("Unable to work with API"))
 // go to clrifiy npm the to github repo then to src then to index.js to try the diffrent models
 
