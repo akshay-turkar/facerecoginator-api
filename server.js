@@ -57,7 +57,7 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)})
 //************************************* */
 
 //**************api call*************** */
-app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
+app.post('/imageurl', (req, res) => {image.handleApiCall(req, res, input)})
 //always do api call at the beck-end***********
 
 
